@@ -24,7 +24,8 @@
     "release": "release-it",
     "test-ci": "nyc mocha",
     "test": "tsc && NODE_OPTIONS=--enable-source-maps mocha",
-    "watch": "mocha --watch"
+    "watch": "mocha --watch",
+    "install": "rm -rf dist && tsc && tsc -p tsconfig.cjs.json && ./.fix-package-types.sh",
   },
   "nyc": {
     "extension": [
